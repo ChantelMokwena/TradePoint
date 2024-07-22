@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Paypoint</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        .product-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s, transform 0.2s;
+        }
+
+        .product-section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-image {
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: opacity 0.5s, transform 0.2s;
+        }
+
+        .product-section.show .product-image {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-section:hover {
+            background-color: #FBC155;
+            color: white;
+        }
+
+        .product-section:hover .product-title {
+            color: white;
+        }
+
+        .product-image {
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: opacity 0.5s, transform 0.5s;
+            height: 300px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+
+    </style>
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <!--start of navigation bar-->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="images/tradepoint.png" alt="" class="img-fluid" style="max-width: 400px; height: auto;">
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-4">
+                        <a class="nav-link px-4 py-2 rounded fw-semibold" href="index.html" style="font-size: 1.1rem; transition: background-color 0.3s, color 0.3s;">Home</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link px-4 py-2 rounded fw-semibold" href="index.html" style="font-size: 1.1rem; transition: background-color 0.3s, color 0.3s;">About</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link px-4 py-2 rounded fw-semibold" href="products.html" style="font-size: 1.1rem; transition: background-color 0.3s, color 0.3s;">Products</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link px-4 py-2 rounded fw-semibold" href="contact.html" style="font-size: 1.1rem; transition: background-color 0.3s, color 0.3s;">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <style>
+        .nav-link:hover {
+            background-color: #FBC155;
+            color: white;
+        }
+        .nav-link {
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        }
+        .nav-link {
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        }
+    </style>
+    <!--end of navigation bar-->
+
+    <artifact>
+        <section id="hero" class="min-vh-100 d-flex align-items-center text-center" style="background-color: lightgray;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-uppercase text-white fw-semibold display-1 animate_animated animate_fadeInDown" >Products</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </artifact>
+
+
+
+    <!-- start of products tab-->
+    <section id="services" class="section-padding border-top py-5">  
+        <div class="container">
+            <!-- Product 1 -->
+            <div class="row align-items-center mb-5 product-section">
+                <div class="col-md-6">
+                    <img src="images/ef60.png" alt="Product 1" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="product-title text-brand">EF60</h2>
+                    <p>A smart micro ECR with exceptional performance and an inventive product architecture is the EF60. The EF60 has two screens, the newest quad-core processor running Android 11, 4GB of RAM, and 64GB of ROM capacity. It is flexible enough to work in a variety of retail settings, including self-service and traditional checkout counters.</p>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="row align-items-center mb-5 product-section">
+                <div class="col-md-6 order-md-2">
+                    <img src="images/n6.png" alt="Product 2" class="img-fluid">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h2 class="product-title text-brand">N6</h2>
+                    <p>Built for mobile payments, the N6 is a tiny, light, and portable smart gadget. Like a smartphone, it is lightweight and portable.The ATEX and IP54 certified N6 is a capable device that supports all payment methods and is powered by a quad-core CPU.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="row align-items-center mb-5 product-section">
+                <div class="col-md-6">
+                    <img src="images/n62.png" alt="Product 3" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="product-title text-brand">N62</h2>
+                    <p>A Smart Mini POS terminal is N62. With its quad-core Cortex A53 processor and Android 10 operating system, it can enable a wide range of flexible payment applications. The N62 is designed to work in omni-channel payment situations thanks to its adaptability, portable body, and attractive and stylish appearance. The N62 is distinguished by its remarkable performance and convenience, which includes superior wireless connectivity, longer battery life, and superb reliability and scalability.                    </p>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="row align-items-center mb-5 product-section">
+                <div class="col-md-6 order-md-2">
+                    <img src="images/n82.png" alt="Product 4" class="img-fluid">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h2 class="product-title text-brand">N82</h2>
+                    <p>The N82 is a smart point-of-sale terminal that operates reliably and securely. It boasts a quad-core processor, a huge battery, and the Android 10 operating system, making it a premium experience. It is portable due to its lightweight and thin construction.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="row align-items-center mb-5 product-section">
+                <div class="col-md-6">
+                    <img src="images/n86.png" alt="Product 5" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="product-title text-brand">N86</h2>
+                    <p>N86's flawless quality and look make it impossible to resist. With a quad-core, 1.4 GHz high-speed processor and an operating system powered by Android 9.0, it offers powerful performance. The creative design blends cutting-edge security technology with the arts. Moreover, N86 has a standby period of up to 240 hours and uses less power.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="row align-items-center mb-5 product-section">
+                <div class="col-md-6">
+                    <img src="images/n96.png" alt="Product 5" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="product-title text-brand">N96</h2>
+                    <p>The N96 is equipped with a 6.5-inch HD INCELL display that supports five points of touch and has a resolution of 1600*720.
+                        Compared to the previous generation device (N5), it has a better screen-to-body ratio, reduced bezels, and an enhanced screen brightness.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .text-brand {
+            color: #FBC155;
+        }
+
+        .products-section {
+            background-color: #f8f9fa;
+        }
+
+        .product-title {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .products-section p {
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .products-section .row {
+            margin-bottom: 3rem;
+        }
+
+        .product-image {
+            height: 300px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+    </style>
+    <!-- end of products tab-->
+    
+
+    
+    <!-- start of footer-->
+    <footer class="footer bg-dark text-light py-5"> 
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-6">
+                    <div class="footer-links d-flex"> 
+                        <a href="index.html" class="me-4">Home</a>
+                        <a href="index.html" class="me-4">About</a>
+                        <a href="products.html" class="me-4">Products</a>
+                        <div class="contact-dropdown position-relative"> 
+                            <a href="#" class="me-4 contact-link" onclick="toggleContactLinks(event)">Contact</a>
+                            <div class="contact-sublinks" style="display: none;">
+                                <a href="contact.html#email" class="sublink">Email Us</a>
+                                <a href="contact.html#phone" class="sublink">Call Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <i class="ri-linkedin-box-fill"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </div>
+                    <p class="mb-0">&copy; 2023 Paypoint. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <style>
+        .footer {
+            background-color: #333; 
+            color: #f0f0f0; 
+            padding: 30px 0; 
+        }
+    
+        .footer-links {
+            display: flex; 
+            align-items: center; 
+        }
+    
+        .footer-links a {
+            color: #f0f0f0; 
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+    
+        .footer-links a:hover {
+            color: #FBC155; 
+        }
+    
+        .contact-dropdown {
+            position: relative; 
+        }
+    
+        .contact-sublinks {
+            display: none; 
+            position: absolute;
+            background-color: #fff; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            z-index: 1000;
+        }
+    
+        .contact-sublinks a {
+            display: block; 
+            color: #333; 
+            text-decoration: none;
+            margin: 5px 0; 
+        }
+    
+        .contact-sublinks a:hover {
+            color: #f7b032; 
+        }
+    
+        .social-icons {
+            display: flex;
+            justify-content: end;
+            margin-bottom: 1rem;
+        }
+    
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #FBC155;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 0.5rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    
+        .social-icon:hover {
+            background-color: #f7b032;
+            color: white;
+        }
+    
+        .product-links {
+            margin-top: 1rem;
+        }
+    
+        .product-link {
+            display: block; 
+            color: #f0f0f0; 
+            text-decoration: none;
+            transition: color 0.3s;
+            margin-bottom: 0.5rem; 
+        }
+    
+        .product-link:hover {
+            color: #f7b032; 
+        }
+    </style>
+    
+    <script>
+        function toggleContactLinks(event) {
+            event.preventDefault(); 
+            const sublinks = document.querySelector('.contact-sublinks');
+            sublinks.style.display = sublinks.style.display === 'none' || sublinks.style.display === '' ? 'block' : 'none';
+        }
+    </script>
+    <!-- end of footer tab-->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const productSections = document.querySelectorAll('.product-section');
+
+        function showProductSections() {
+            productSections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (sectionTop < windowHeight * 0.8) {
+                    section.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', showProductSections);
+    </script>
+</body>
+</html>
